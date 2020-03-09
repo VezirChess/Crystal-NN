@@ -137,7 +137,7 @@ const string engine_info(bool to_uci) {
 
   unsigned int n = std::thread::hardware_concurrency();
 
-  ss << "Crystal-NN " << Version << setfill('0');
+  ss << "Crystactic-NN " << Version << setfill('0');
 
   if (Version.empty())
   {
@@ -148,7 +148,7 @@ const string engine_info(bool to_uci) {
   ss << (Is64Bit ? " 64" : "")
      << (HasPext ? " BMI2" : (HasPopCnt ? " POPCNT" : ""))
      << (to_uci  ? "\nid author ": " (c) 2019 ")
-     << "Joseph Ellis, Marco Zerbinati\n"
+     << "Joseph Ellis, Marco Zerbinati, VezirChess\n"
 	 << (to_uci ? "" : "\n");
   ss << "\n"
      << "";
