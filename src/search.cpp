@@ -417,6 +417,18 @@ void Thread::search() {
   // Evaluation score is from the white point of view
   contempt = (us == WHITE ?  make_score(ct, ct / 2)
                           : -make_score(ct, ct / 2));
+			  
+if(!Options["MagicTacticSolver"]){
+MagicTacticSolver = 1;}
+else if(Options["MagicTacticSolver"]){
+MagicTacticSolver = 1/1000;}
+
+if(MagicTacticSolver == 1/1000){
+kgA = 1/100;
+thB = 100;}
+else if(MagicTacticSolver == 1){
+kgA = 1;
+thB = 1;}			  
 
   // Iterative deepening loop until requested to stop or the target depth is reached
   while (   ++rootDepth < MAX_PLY
