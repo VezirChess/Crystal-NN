@@ -68,6 +68,7 @@ void init(OptionsMap& o) {
   o["Contempt"]              << Option(0, -100, 100);
   o["Dynamic Contempt"]      << Option(false);
   o["Analysis Contempt"]     << Option("Off var Off var White var Black var Both", "Off");
+  o["MagicTacticSolver"]     << Option(false);
   o["Threads"]               << Option(1, 1, 512, on_threads);
   o["Show Fail High and Fail Low"] << Option(true);
   o["Hash"]                  << Option(16, 1, MaxHashMB, on_hash_size);
