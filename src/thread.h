@@ -74,6 +74,14 @@ public:
   CapturePieceToHistory captureHistory;
   ContinuationHistory continuationHistory[2][2];
   Score contempt;
+  uint16_t MagicTacticSolver;
+  uint16_t kgA;
+  uint16_t thB;
+  Score Pex;
+  Score Kex;
+  Score Bex;
+  Score Rex;
+  Score Qex;
 };
 
 
